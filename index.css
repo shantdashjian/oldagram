@@ -1,5 +1,91 @@
 html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 13px;
+}
+
+.container {
+    width: 375px;
+    border: 1px solid black;
+    margin: 10px auto;
+}
+
+header {
+    height: 67px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    border-bottom: 1px solid black;
+}
+
+#logo {
+    width: 127px;
+}
+
+#user-avatar, .post-header-avatar {
+    width: 34px;
+    border-radius: 50%;
+}
+
+.post {
+    padding-bottom: 16px;
+    background-color: #eaeafa;
+}
+
+.post-header {
+    height: 55px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.post-header-info {
+    margin-left: 10px;
+}
+
+h3, p {
+    margin: 0px;
+}
+
+.location {
+    font-size: 12px;
+}
+
+.post-img {
+    width: 100%;
+}
+
+.icon {
+    width: 23px;
+    margin-top: 0px;
+    margin-right: 15px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+.icons {
+    padding-top: 21px;
+    padding-left: 0px;
+}
+
+.reactions, .comments {
+    padding-left: 10px;
+}
+
+.icons, .comment-text, .likes {
+    padding-bottom: 12px;
+}
+
+.likes, .username {
+    font-weight: bold;
+}
+
+.icon:hover {
+    border: 1px solid black;
+    border-radius: 5px;
+    background: #e58ce5;
 }
 
