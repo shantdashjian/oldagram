@@ -1,9 +1,40 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <img src="images/logo.png">
-        <script src="index.js"></script>
-    </body>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<header>
+  <img src="images/logo.png" alt="oldagram logo">
+  <img src="images/user-avatar.png" alt="user avatar">
+</header>
+<main id="posts">
+  <section class="post">
+    <div class="post-header">
+      <img src="images/avatar-vangogh.jpg" alt="vangogh avatar">
+      <h3>Vincent van Gogh</h3>
+      <p>Zundert, Netherlands</p>
+    </div>
+    <div class="post-content">
+      <img src="images/post-vangogh.jpg" alt="vangogh post">
+      <div class="reactions">
+        <div class="icons">
+          <img src="images/icon-heart.png" alt="heart icon">
+          <img src="images/icon-comment.png" alt="comment icon">
+          <img src="images/icon-dm.png" alt="dm icon">
+        </div>
+        <div class="likes">
+          <p><span class="likes-number">21</span> <span>likes</span></p>
+        </div>
+      </div>
+    </div>
+    <div class="post-comments">
+      <div class="comment">
+        <p><span class="username">vincey1853</span> <span class="comment-text">just took a few mushrooms lol</span></p>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="index.js"></script>
+</body>
 </html>
