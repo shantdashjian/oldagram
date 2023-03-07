@@ -17,7 +17,7 @@ const posts = [
         comment: "i'm feelin a bit stressed tbh",
         likes: 4
     },
-        {
+    {
         name: "Joseph Ducreux",
         username: "jd1735",
         location: "Paris, France",
@@ -28,18 +28,39 @@ const posts = [
     }
 ]
 
-const nameEl = document.getElementById("name-el")
-const locationEl = document.getElementById("location-el")
-const usernameEl = document.getElementById("username-el")
-const postHeaderAvatarEl = document.getElementById("post-header-avatar-el")
-const postImgEl = document.getElementById("post-img-el")
-const commentTextEl = document.getElementById("comment-text-el")
-const likesNumberEl = document.getElementById("likes-number-el")
+let innerHTML = ''
+posts.map((post) => {
+    innerHTML += `
+            <section class="post">
+      <div class="post-header">
+        <img class="post-header-avatar" alt="vangogh avatar" src="${post.avatar}">
+        <div class="post-header-info">
+          <h3>${post.name}</h3>
+          <p class="location">${post.location}</p>
+        </div>
+      </div>
+      <div class="post-content">
+        <img class="post-img" alt="vangogh post" src="${post.post}">
+        <div class="reactions">
+          <div class="icons">
+            <img class="icon" src="images/icon-heart.png" alt="heart icon">
+            <img class="icon" src="images/icon-comment.png" alt="comment icon">
+            <img class="icon" src="images/icon-dm.png" alt="dm icon">
+          </div>
+          <div class="likes">
+            <p><span class="likes-number">${post.likes}</span> <span>likes</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <p><span class="username">${post.username}</span> <span id="comment-text-el" class="comment-text">${post.comment}</span>
+          </p>
+        </div>
+      </div>
+    </section>
 
-nameEl.textContent = posts[0].name
-locationEl.textContent = posts[0].location
-usernameEl.textContent = posts[0].username
-postHeaderAvatarEl.setAttribute("src", posts[0].avatar);
-postImgEl.setAttribute("src", posts[0].post);
-commentTextEl.textContent = posts[0].comment
-likesNumberEl.textContent = posts[0].likes
+    `
+})
+
+document.getElementById('posts').innerHTML = innerHTML
