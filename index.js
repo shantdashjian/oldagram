@@ -29,7 +29,7 @@ const posts = [
 ]
 
 let innerHTML = ''
-posts.map((post) => {
+posts.forEach((post) => {
     innerHTML += `
             <section class="post">
       <div class="post-header">
